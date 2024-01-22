@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <resources>
+    <style name="MySplash" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">#CC0909</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_ex</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.MidtermProject</item>
+    </style>
+</resources>

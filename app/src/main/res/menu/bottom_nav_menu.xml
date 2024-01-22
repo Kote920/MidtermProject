@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_reminders"
+        android:icon="@drawable/reminders"
+        android:title="@string/medicines" />
+    <item
+        android:id="@+id/nav_detector"
+        android:icon="@drawable/blogs"
+
+        android:title="@string/blogs" />
+
+</menu>

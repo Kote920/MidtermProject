@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="7dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/recycler_calendar_item_arc"
+        android:text="8"
+        android:textColor="#ffce31"
+        android:id="@+id/tvDate"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thu"
+        android:textColor="#ffce31"
+        android:id="@+id/tvWeekDay"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="April"
+        android:textColor="#ffce31"
+        android:id="@+id/tvMonth"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "841311311700",
+    "project_id": "tbcmidtermproject",
+    "storage_bucket": "tbcmidtermproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841311311700:android:7d6bd3933463f0ddf6dac1",
+        "android_client_info": {
+          "package_name": "com.example.midtermproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBklwSHKVZwBH3o5YvgBOsHxpmNYenuvTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
