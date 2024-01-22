@@ -2,23 +2,16 @@ package com.example.midtermproject.presentation.fragments
 
 import android.app.AlertDialog
 import android.content.Context
-import android.os.Bundle
-import android.util.Log
 import android.util.Log.d
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.midtermproject.R
 import com.example.midtermproject.databinding.FragmentRemindersBinding
-import com.example.midtermproject.presentation.BaseFragment
+import com.example.midtermproject.presentation.base.BaseFragment
 import com.example.midtermproject.presentation.adapters.CalendarRecyclerAdapter
 import com.example.midtermproject.presentation.adapters.RemindersRecyclerAdapter
 import com.example.midtermproject.presentation.model.CalendarDay

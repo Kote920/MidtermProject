@@ -7,7 +7,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.midtermproject.databinding.FragmentSplashBinding
-import com.example.midtermproject.presentation.BaseFragment
+import com.example.midtermproject.presentation.base.BaseFragment
 import com.example.midtermproject.presentation.viewModels.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay

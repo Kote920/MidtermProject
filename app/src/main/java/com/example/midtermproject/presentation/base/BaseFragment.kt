@@ -1,18 +1,12 @@
-package com.example.midtermproject.presentation
+package com.example.midtermproject.presentation.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-
-
-
 typealias inflater<VB> = (LayoutInflater, ViewGroup?, Boolean) -> VB
-
 abstract class BaseFragment<VB : ViewBinding>(private val inflate: inflater<VB>) : Fragment() {
 
     private var _binding: VB? = null

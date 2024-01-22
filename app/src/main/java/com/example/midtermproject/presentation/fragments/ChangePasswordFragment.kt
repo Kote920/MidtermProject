@@ -1,20 +1,14 @@
 package com.example.midtermproject.presentation.fragments
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.navArgs
-import com.example.midtermproject.R
 import com.example.midtermproject.data.common.Resource
 import com.example.midtermproject.databinding.FragmentChangePasswordBinding
-import com.example.midtermproject.presentation.BaseFragment
+import com.example.midtermproject.presentation.base.BaseFragment
 import com.example.midtermproject.presentation.viewModels.ChangePasswordViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

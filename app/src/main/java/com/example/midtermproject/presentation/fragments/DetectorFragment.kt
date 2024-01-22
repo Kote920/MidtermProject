@@ -1,17 +1,8 @@
 package com.example.midtermproject.presentation.fragments
 
-import android.util.Log.d
-import android.view.View
-import android.widget.Toast
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import com.example.midtermproject.data.common.Resource
 import com.example.midtermproject.databinding.FragmentDetectorBinding
-import com.example.midtermproject.presentation.BaseFragment
+import com.example.midtermproject.presentation.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class DetectorFragment : BaseFragment<FragmentDetectorBinding>(FragmentDetectorBinding::inflate) {

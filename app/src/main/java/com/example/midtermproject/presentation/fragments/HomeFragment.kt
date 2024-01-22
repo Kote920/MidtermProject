@@ -1,19 +1,13 @@
 package com.example.midtermproject.presentation.fragments
 
-import android.os.Bundle
-import android.provider.CalendarContract.Reminders
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.midtermproject.R
 import com.example.midtermproject.databinding.FragmentHomeBinding
-import com.example.midtermproject.presentation.BaseFragment
+import com.example.midtermproject.presentation.base.BaseFragment
 import com.example.midtermproject.presentation.viewModels.HomeViewModel
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
