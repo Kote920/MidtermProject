@@ -24,18 +24,18 @@ class ChangePasswordFragment : BaseFragment<FragmentChangePasswordBinding>(Fragm
 
     private val viewModel: ChangePasswordViewModel by viewModels()
 
-    private val safeargs: HomeFragmentArgs by navArgs()
+//    private val safeargs: HomeFragmentArgs by navArgs()
 
     override fun setUp() {
         binding.btnChangePassword.isActivated = false
     }
 
     override fun listeners() {
-
-        binding.btnChangePassword.setOnClickListener {
-            viewModel.changePassword(safeargs.email, binding.etCurrentPassword.text.toString(), binding.etNewPassword.text.toString())
-            bindObserves()
-        }
+//
+//        binding.btnChangePassword.setOnClickListener {
+//            viewModel.changePassword(safeargs.email, binding.etCurrentPassword.text.toString(), binding.etNewPassword.text.toString())
+//            bindObserves()
+//        }
 
     }
 

@@ -65,7 +65,7 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>(FragmentLogInBinding::i
                                     is LogInFragmentNavigationEvent.NavigationToHome ->{
                                         binding.pbLogIn.visibility = View.GONE
                                         binding.btnLogIn.isEnabled = false
-                                        openHome(activeUser.user!!.email.toString())}
+                                        openHome()}
                                 }
 
                             }
@@ -85,8 +85,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>(FragmentLogInBinding::i
         }
     }
 
-    private fun openHome(email:String) {
-        val action = LogInFragmentDirections.actionLoginFragmentToHomeFragment(email)
+    private fun openHome() {
+        val action = LogInFragmentDirections.actionLoginFragmentToHomeFragment()
         findNavController().navigate(action)
     }
 

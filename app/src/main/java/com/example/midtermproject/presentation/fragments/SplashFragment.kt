@@ -22,7 +22,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
     override fun setUp() {
 
         Glide.with(this)
-            .load("https://media.giphy.com/media/suiMTS2HD7oZ0SB8Dw/giphy.gif")
+            .load("https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif")
             .into(binding.gifImageView)
         viewModel.readSession()
         bindObserves()
@@ -39,9 +39,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
                 viewModel.sessionFlow.collect{remember ->
 
                     delay(2000)
-                    viewModel.emailFlow.collect{
-                        openSpecificFragment(remember, it)
-                    }
+                    openSpecificFragment(remember)
 
 
                 }
@@ -53,14 +51,14 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
         findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
 
     }
-    private fun openHomeFragment(email: String){
-        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment(email))
+    private fun openHomeFragment(){
+        findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
     }
 
-    private fun openSpecificFragment( remember: Boolean, email:String){
+    private fun openSpecificFragment( remember: Boolean,){
         if (remember){
 
-            openHomeFragment(email)
+            openHomeFragment()
         }else{
             openLoginFragment()
         }
