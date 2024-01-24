@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:background="@drawable/recycler_item_arc">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvIssueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/issue_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Prof NAme"
+        android:textColor="@color/cyan"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvIssueName"
+        app:layout_constraintStart_toEndOf="@id/tvIssueName"
+        app:layout_constraintTop_toTopOf="@id/tvIssueName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvIssueProfName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medical_term"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIssueName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProfName"
+        app:layout_constraintStart_toEndOf="@id/tvIssueProfName"
+        app:layout_constraintTop_toTopOf="@id/tvIssueProfName"
+        app:layout_constraintBottom_toBottomOf="@id/tvIssueProfName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AStigmatism"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/cyan"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIssueProfName"
+        android:id="@+id/tvIssueAccuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accuracy"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toEndOf="@id/tvIssueAccuracy"
+        app:layout_constraintTop_toTopOf="@id/tvIssueAccuracy"
+        app:layout_constraintBottom_toBottomOf="@id/tvIssueAccuracy"
+        android:id="@+id/tvAccuracy"
+        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.421"
+        android:textColor="@color/cyan"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toTopOf="@id/tvAccuracy"
+        app:layout_constraintStart_toEndOf="@id/tvAccuracy"
+        app:layout_constraintBottom_toBottomOf="@id/tvAccuracy"
+        android:id="@+id/tvPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textColor="@color/cyan"
+        android:textSize="16sp" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

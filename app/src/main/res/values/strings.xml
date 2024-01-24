@@ -15,4 +15,13 @@
     <string name="blogs">Blogs</string>
     <string name="medicines">medicines</string>
     <string name="plus">+</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter_symptom">Enter Symptom</string>
+    <string name="analyze_symptoms">Analyze symptoms</string>
+    <string name="detect">Detect</string>
+    <string name="age">Age</string>
+    <string name="issue_name">Issue name:</string>
+    <string name="medical_term">Medical term:</string>
+    <string name="accuracy">Accuracy:</string>
+    <string name="medical_specialisation">Medical specialisation:</string>
 </resources>

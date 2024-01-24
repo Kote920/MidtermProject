@@ -41,6 +41,10 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>(FragmentLogInBinding::i
             }
         })
 
+        binding.tvRecoverPassword.setOnClickListener{
+                openRecover()
+        }
+
     }
 
     override fun bindObserves() {
@@ -85,6 +89,11 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>(FragmentLogInBinding::i
 
     private fun openHome() {
         val action = LogInFragmentDirections.actionLoginFragmentToHomeFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun openRecover() {
+        val action = LogInFragmentDirections.actionLoginFragmentToRecoverPasswordFragment()
         findNavController().navigate(action)
     }
 

@@ -4,13 +4,17 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import com.example.midtermproject.data.common.HandleResponse
 import com.example.midtermproject.data.local.dao.ReminderDao
+import com.example.midtermproject.data.remote.service.HealthService
+import com.example.midtermproject.data.remote.service.TokenService
 
 import com.example.midtermproject.data.repository.AuthRepositoryImpl
 import com.example.midtermproject.data.repository.DataStoreRepositoryImpl
+import com.example.midtermproject.data.repository.HealthRepositoryImpl
 import com.example.midtermproject.data.repository.LocalReminderRepositoryImpl
 import com.example.midtermproject.data.repository.PasswordManagementRepositoryImpl
 import com.example.midtermproject.domain.repository.AuthRepository
 import com.example.midtermproject.domain.repository.DataStoreRepository
+import com.example.midtermproject.domain.repository.HealthRepository
 import com.example.midtermproject.domain.repository.LocalReminderRepository
 import com.example.midtermproject.domain.repository.PasswordManagementRepository
 import com.google.firebase.auth.FirebaseAuth
@@ -49,15 +53,15 @@ object RepositoryModule {
     @Provides
     fun provideLocalReminderRepository(reminderDao: ReminderDao): LocalReminderRepository{
 
-        return LocalReminderRepositoryImpl(reminderDao = reminderDao)
+        return LocalReminderRepositoryImpl( reminderDao)
 
     }
-//
-//    @Provides
-//    @Singleton
-//    fun provideMedicineRepository(apiService: MedicineApiService): MedicineRepository {
-//        return MedicineRepositoryImpl(apiService)
-//    }
+    @Provides
+    @Singleton
+    fun provideGetTokenRepository(tokenService: TokenService, healthService: HealthService): HealthRepository {
+        return HealthRepositoryImpl(tokenService, healthService)
+
+    }
 
 
 

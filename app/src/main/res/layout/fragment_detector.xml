@@ -4,18 +4,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".presentation.fragments.DetectorFragment">
 
 
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rgMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_group_check"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="@color/cyan"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rgFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:button="@drawable/radio_group_check"
+            android:text="Female"
+            android:textColor="@color/cyan"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textColor="@color/cyan"
+        android:textColorHint="#736E6E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rgGender"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:hint="@string/enter_symptom"
+        android:singleLine="true"
+        android:textColor="@color/cyan"
+        android:textColorHint="#736E6E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgGender" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSymptoms"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/etSearch"
+        app:layout_constraintStart_toStartOf="@id/etSearch"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChosenSymptoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewSymptoms" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDetect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/cyan"
+        android:text="@string/detect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerChosenSymptoms" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/cyan"
+        android:text="Try again"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNotFound" />
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/tvNotFound"
+        android:textColor="@color/cyan"
+        android:text="Program could not detect any results"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:layout_constraintStart_toStartOf="@id/etSearch"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/etSearch"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        android:id="@+id/pbDetector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Fragment Detector"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnDetect"
+        app:layout_constraintEnd_toEndOf="@id/pbDetector"
+        app:layout_constraintTop_toBottomOf="@id/btnDetect"
+        android:layout_marginTop="15dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIssues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btnTryAgain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
